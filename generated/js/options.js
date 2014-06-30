@@ -1,0 +1,1 @@
+var jr = {"styles":["themes\/default.css","\/\/fonts.googleapis.com\/css?family=Average","\/\/fonts.googleapis.com\/css?family=Roboto:400,700"],"charset":"utf-8","title":"web-md-generator","menuPosition":"top","index":"read me","scripts":["js\/showdown.js"],"body":null,"markdownContent":null,"plugins":[],"cssFw":"default","logo":null,"favicon":"favicon.ico"};
