@@ -11,28 +11,29 @@ It will also make a simple menu directly with your markdown files
 
 Usage
 -----
-The best way is to get the phar archive from here [web-md-generator.phar](http://cloud.arthurh.fr/public.php?service=files&t=5bafec2b00bfc4e07793a578c50eb61a&download).
+The best way is to get the phar archive from here [web-md-generator.phar](http://cloud.arthurh.fr/public.php?service=files&t=8055f79db35f9a6b1f37be97598e0920&download).
+
 Put this archive inside your future website with all your markdown files inside (Markdown files should have .md extension).
 Finally run:
-```
+```shell
 php web-md-generator.phar
 ```
-
+After you can simply add other markdown files and regenerate to add in your menu. And you can also simply modified `.html` generated, it's still markdown inside so it will be easy to modify.
 Change your option.yml
 ----------------------
 When you will generate your website you will have a new `options.yml` created.
 By default you will have that:
 ```yaml
 styles:
-  - "default"
-  - "//fonts.googleapis.com/css?family=Average"
-  - "//fonts.googleapis.com/css?family=Roboto:400,700"
+- "default"
+- "//fonts.googleapis.com/css?family=Average"
+- "//fonts.googleapis.com/css?family=Roboto:400,700"
 charset: "UTF-8"
 title: "My Website"
 menuPosition: "top"
 index: index
 scripts:
-  - "js/showdown.js"
+- "js/showdown.js"
 ```
 `styles`: you can change `default` by `bootstrap` to get the bootstrap by twitter style. and add all css you want.
 
@@ -52,6 +53,24 @@ For favicon: Simply add a favicon.(png|ico|jpg|gif) at your root website folder 
 
 For logo: Simply add a logo.(png|ico|jpg|gif) at your root website folder and regenerate your website.
 
+Custom your menu
+----------------
+When you generate you will have a `menu.yml`, you can modify it to set link and/or menu name.
+```yaml
+menu:
+- { index: 'read me' } #on the left file without .html extension and on the right your menu name
+- { 'who am i': 'who am i' }
+```
+
+Example and demos
+-----------------
+For the example go to: [https://github.com/ArthurHlt/web-md-generator-example](https://github.com/ArthurHlt/web-md-generator-example)
+
+Demo with `default` style with menu on top: [http://web-md-generator.arthurh.fr/default-top/](http://web-md-generator.arthurh.fr/default-top/)
+
+Demo with `default` style with menu on side: [http://web-md-generator.arthurh.fr/default-side/](http://web-md-generator.arthurh.fr/default-side/)
+
+Demo with `bootstrap` style: [http://web-md-generator.arthurh.fr/bootstrap/](http://web-md-generator.arthurh.fr/bootstrap/)
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
